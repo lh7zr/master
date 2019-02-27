@@ -11,11 +11,15 @@ $(function(){
 	for (var i =0; i<divs.length; i++) {
 		console.log(divs[i].innerHTML);
 	}
-	$("div ~ img").css("border","solid 5px red");
+	/* $("div ~ img").css("border","solid 5px red");
 	$("li:first-child").css("color","red");
 	$("li:last-child").css("color","blue");
 	$("li:nth-child(1)").css("background","#ff6");
-	$("li:nth-child(2n)").css("background","#6ff");
+	$("li:nth-child(2n)").css("background","#6ff"); */
+	$("li:empty").text("空内容");   // :empty匹配空元素
+	$("div ul:parent").css("background","#ff1"); // 匹配div包含ul元素中包含的子元素或者文本元素
+	$("h2:contains('标题')").css("color","red");  //:contains 匹配包含给定文本的元素
+	$("p:has(span)").css("color","blue");  //匹配含有选择器所匹配的元素的元素，（包含span元素的p元素）
 })
 
 /* console.log('start')
