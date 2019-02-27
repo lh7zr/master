@@ -3,7 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>可见过滤器</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				$("p:odd").hide();  //隐藏奇数位p元素
+				$("p:odd").css("color","red"); //设置奇数位p元素的字体颜色为红色
+				$("p:visible").css("color","blue"); //设置所有的可见元素字体颜色为蓝色
+				$("p:hidden").show();  //显示奇数位p元素
+			})
+		</script>
 	</head>
 	<body>
+		<p>红楼一梦梦贯红楼</p>
+		<p>人生自古谁无死</p>
+		<p>鞠婧祎</p>
+		<p>林思意</p>
 	</body>
 </html>
